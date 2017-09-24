@@ -13,13 +13,6 @@ app.get("/", (req, res) => {
     res.render("index", {
         content: "<strong>Practical Steps For Success In a Coding Bootcamp</strong>",
         narrative: "So you've jumped on the bandwagon and decided to sign up for a bootcamp, or more formally, a cohort, and is excited about all the languages and fameworks you are expecting learn but have never written a line of code, or, have very little experience coding.  Here are some pratical steps that can help you keep up in such a moderate to fast-paced learning environment: "
-        // <ol> PASS as an array and loop through in ejs file
-        //     <li>Look over the list of languages and frameworks you are expecting to learn</li>
-        //     <li>Familiarize yourself with the languages</li>
-        //     <li>Attend class &amp; particpate</li>
-        //     <li>Practice, practice, practice</li>
-        //     <li>Network</li>
-        // </ol>"
     });
 });
 
@@ -69,25 +62,17 @@ app.get("/html", (req, res) => {
 
          htmlpara4: " <p>Given its purpose, HTML is not a programming languge, it doesn't give a computer specific instructions.  In a simplified definition, HTML instructs a web browser on how to display a website and the HTML tags describe, to the browser, the content being displayed.",
 
+        
+        htmlpara5: "Below is an example of a hyperlink and the website that it redirects the user to. The area underlined in red consist of the", htmlpara5Content: " or web address of the resource the user will be redirected to after clicking on the link as well as the name of the link that will be visible to the user.",
+        
+         htmlpara6: "Since its inception, there have been many revisions to HTML and the most recent version is HTML5 which refers to a collection of new specifications. Those specifictions include a condensed ", htmlpara6Content: "While this may not be an inclusive list, it\'s among the most notable.  The list below is comprised of new semantic elements, elements which mean something:",
+
+         htmlpara7: "HTML standards has evolved over the years as so has the web.  Web and HTML standards are developed and maintained by the",  htmlpara7Content: "or W3C, a global network of member organizations, employees and the public, who work together to also ensure the longevity and growth of web standards.",
+
+         htmlpara8: "You can learn more about the history of HTML and the web on", htmlpara8Content: "For additional studies on HTML5", htmlpara8Content2: "or MDN, is a reliable and credible source of information among Developers. ", htmlpara8Content3: " also offers quick and simplified referneces and information."
+         
         });
     });
-
-//         htmlpara5: "Below is an example of a hyperlink and the website that it redirects the user to. The area underlined in red consist of the <a href=\"https://www.w3schools.com/tags/tag_a.asp\" target=\"_blank\">HTML tag</a>, its <a href="\https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes\" target=\"_blank">attributes</a>, the <a href="\https://www.w3schools.com/html/html_urlencode.asp\" target=\"_blank\">URL</a> or web address of the resource the user will be redirected to after clicking on the link as well as the name of the link that will be visible to the user.",
-        
-//         htmlpara6: "Since its inception, there have been many revisions to HTML and the most recent version is HTML5 which refers to a collection of new specifications. Those specifictions include a condensed <a href=\"https://www.w3schools.com/tags/tag_doctype.asp\" target=\"_blank\">doctype</a> , a simplified 
-        
-//         <a href="\https://www.w3schools.com/html/html_charset.asp\" target=\"_blank\">charater set</a> declaration, new graphic and multimedia elements, 
-        
-//         <a href=\"https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82\" target=\"_blank\">API interfaces</a>, new attributes for form elements and 
-        
-//         <a href=\"https://www.w3schools.com/html/html5_semantic_elements.asp\" target=\"_blank\">semantic elements</a>.  While this may not be an inclusive list, it\'s among the most notable.  The list below is comprised of new semantic elements, elements which mean something: </p>",
-        
-//         htmlpara7: "HTML standards has evolved over the years as so has the web.  Web and HTML standards are developed and maintained by the <a href="https://www.w3.org/Consortium/" target="_blank">World Wide Web Corsortium</a> or W3C, a global network of member organizations, employees and the public, who work together to also ensure the longevity and growth of web standards.",
-
-//         htmlpara8: "You can learn more about the history of HTML and the web on <a href="https://www.w3.org/People/Raggett/book4/ch02.html" target="_blank">W3Cs'</a> website.  For additional studies on HTML5, <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank">Mozilla Developer Network</a> or MDN, is a reliable and credible source of information among Developers. <a href="https://www.w3schools.com/html/html5_intro.asp" target="_blank">W3 Schools</a> also offers quick and simplified referneces and information.",
-//     });
-// });
-
 //Routes ENDS here
 
 app.listen(3000);
