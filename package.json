@@ -1,0 +1,23 @@
+{
+  "name": "cca-node-express-blog",
+  "version": "1.0.0",
+  "description": "Blog powered by node and express",
+  "main": "blogApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bviengineer/cca-node-express-blog.git"
+  },
+  "author": "BVIDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bviengineer/cca-node-express-blog/issues"
+  },
+  "homepage": "https://github.com/bviengineer/cca-node-express-blog#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  }
+}
