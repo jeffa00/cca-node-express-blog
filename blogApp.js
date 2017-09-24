@@ -23,6 +23,13 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/about", (req, res) => {
+    res.render("about", {
+        about: "About Me",
+        aboutContent: "I am the author of BVIDev. B.V.I is an acronym for British Virgin Islands and Dev is a shortened form of the word  Developer.  BVIDev Blog will highlight of my dev journey and from time to time, persectives, experiences and opinions, on a being a woman in tech."
+    });
+});
+
 app.get("/bootcamp", (req, res) => {
     res.render("bootcamp", {
        content: "<strong>Practical Steps For Success In a Coding Bootcamp</strong>",
