@@ -8,6 +8,9 @@ const app = express();
 //setting the view engine to ejs
 app.set("view engine", "ejs");
 
+//makes images visible and css files function
+app.use(express.static('public'))
+
 //Routes BEGINS here
 app.get("/", (req, res) => {
     res.render("index", {
