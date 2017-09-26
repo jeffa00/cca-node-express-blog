@@ -7,7 +7,7 @@ body, html {
 }
 
 .hero-image {
-  background-image: url("img/home-office.jpg");
+  background-image: url("/img/home-office.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
