@@ -1,5 +1,5 @@
 //CCA Front End Development
-//Node & Express powered Blog App
+//Node & Express-powered Blog App
 
 //Importing express module and assigning to a const
 const express = require("express");
@@ -8,7 +8,7 @@ const app = express();
 //setting the view engine to ejs
 app.set("view engine", "ejs");
 
-//makes images visible and css files function
+//makes images visible and external css functional
 app.use(express.static('public'))
 
 //Routes BEGINS here
