@@ -1,17 +1,25 @@
 //CCA Front End Development
 //Node & Express-powered Blog App
 
+
 //Importing express module and assigning to a const
 const express = require("express");
 const app = express();
 
+
 //setting the view engine to ejs
 app.set("view engine", "ejs");
+
 
 //makes images visible and external css functional
 app.use(express.static('public'))
 
-//Routes BEGINS here
+
+//Routes BEGIN here
+app.post("/confirmation", (req, res) => {
+    res.render("confirmation", {confirmation: "Thank you! Your Message Was Received by our team!"});
+});
+
 app.get("/", (req, res) => {
     res.render("index", {
         heading: "<strong>Practical Steps For Success In a Coding Bootcamp</strong>",
@@ -75,7 +83,7 @@ app.get("/html", (req, res) => {
          
         });
     });
-//Routes ENDS here
+//Routes END here
 
 app.listen(3000);
 console.log("The server is runnig on port 3000");
