@@ -63,16 +63,16 @@ app.get("/html", (req, res) => {
 
         htmlpara3: "<strong>Markup</strong> in the context of the web means, adding special notes to a document via ", htmlpara3Content: " that describes its meaning and defines its structure.",
 
-         htmlpara4: " <p>Given its purpose, HTML is not a programming languge, it doesn't give a computer specific instructions.  In a simplified definition, HTML instructs a web browser on how to display a website and the HTML tags describe, to the browser, the content being displayed.",
+        htmlpara4: " <p>Given its purpose, HTML is not a programming languge, it doesn't give a computer specific instructions.  In a simplified definition, HTML instructs a web browser on how to display a website and the HTML tags describe, to the browser, the content being displayed.",
 
         
         htmlpara5: "Below is an example of a hyperlink and the website that it redirects the user to. The area underlined in red consist of the", htmlpara5Content: " or web address of the resource the user will be redirected to after clicking on the link as well as the name of the link that will be visible to the user.",
         
-         htmlpara6: "Since its inception, there have been many revisions to HTML and the most recent version is HTML5 which refers to a collection of new specifications. Those specifictions include a condensed ", htmlpara6Content: "While this may not be an inclusive list, it\'s among the most notable.  The list below is comprised of new semantic elements, elements which mean something:",
+        htmlpara6: "Since its inception, there have been many revisions to HTML and the most recent version is HTML5 which refers to a collection of new specifications. Those specifictions include a condensed ", htmlpara6Content: "While this may not be an inclusive list, it\'s among the most notable.  The list below is comprised of new semantic elements, elements which mean something:",
 
-         htmlpara7: "HTML standards has evolved over the years as so has the web.  Web and HTML standards are developed and maintained by the",  htmlpara7Content: "or W3C, a global network of member organizations, employees and the public, who work together to also ensure the longevity and growth of web standards.",
+        htmlpara7: "HTML standards has evolved over the years as so has the web.  Web and HTML standards are developed and maintained by the",  htmlpara7Content: "or W3C, a global network of member organizations, employees and the public, who work together to also ensure the longevity and growth of web standards.",
 
-         htmlpara8: "You can learn more about the history of HTML and the web on", htmlpara8Content: "For additional studies on HTML5", htmlpara8Content2: "or MDN, is a reliable and credible source of information among Developers. ", htmlpara8Content3: " also offers quick and simplified referneces and information."
+        htmlpara8: "You can learn more about the history of HTML and the web on", htmlpara8Content: "For additional studies on HTML5", htmlpara8Content2: "or MDN, is a reliable and credible source of information among Developers. ", htmlpara8Content3: " also offers quick and simplified referneces and information."
          
         });
     });
