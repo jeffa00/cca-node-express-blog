@@ -63,9 +63,8 @@ app.get("/html", (req, res) => {
 
         htmlpara3: "<strong>Markup</strong> in the context of the web means, adding special notes to a document via ", htmlpara3Content: " that describes its meaning and defines its structure.",
 
-        htmlpara4: " <p>Given its purpose, HTML is not a programming languge, it doesn't give a computer specific instructions.  In a simplified definition, HTML instructs a web browser on how to display a website and the HTML tags describe, to the browser, the content being displayed.",
+        htmlpara4: " Given its purpose, HTML is not a programming languge, it doesn't give a computer specific instructions.  In a simplified definition, HTML instructs a web browser on how to display a website and the HTML tags describe, to the browser, the content being displayed.",
 
-        
         htmlpara5: "Below is an example of a hyperlink and the website that it redirects the user to. The area underlined in red consist of the", htmlpara5Content: " or web address of the resource the user will be redirected to after clicking on the link as well as the name of the link that will be visible to the user.",
         
         htmlpara6: "Since its inception, there have been many revisions to HTML and the most recent version is HTML5 which refers to a collection of new specifications. Those specifictions include a condensed ", htmlpara6Content: "While this may not be an inclusive list, it\'s among the most notable.  The list below is comprised of new semantic elements, elements which mean something:",
