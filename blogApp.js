@@ -14,7 +14,7 @@ app.use(express.static('public'))
 //Routes BEGINS here
 app.get("/", (req, res) => {
     res.render("index", {
-        content: "<strong>Practical Steps For Success In a Coding Bootcamp</strong>",
+        heading: "<strong>Practical Steps For Success In a Coding Bootcamp</strong>",
         narrative: "So you've jumped on the bandwagon and decided to sign up for a bootcamp, or more formally, a cohort, and is excited about all the languages and fameworks you are expecting learn but have never written a line of code, or, have very little experience coding.  Here are some pratical steps that can help you keep up in such a moderate to fast-paced learning environment: "
     });
 });
