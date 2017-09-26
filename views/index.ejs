@@ -1,12 +1,11 @@
 <% include head %>
 
-    <h2><%- heading %></h2>
-    <p><%= narrative %></p> 
+<h2><%- heading %></h2>
+<p><%= narrative %></p> 
+<% include adviselist %>    
 
-    <% include adviselist %>    
+<p id="more-arrow"><a href="/bootcamp">Continue Reading &rarr;</a></p>
 
-    <% include body %>
+<% include body %>
     
-    <p id="more-arrow"><a href="/bootcamp">Continue Reading &rarr;</a></p>      
-    
-    <% include footer %>
+<% include footer %>
