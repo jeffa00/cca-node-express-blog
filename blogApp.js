@@ -4,15 +4,18 @@
 
 //Importing express module and assigning to a const
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
-
 
 //setting the view engine to ejs
 app.set("view engine", "ejs");
 
 
-//makes images visible and external css functional
-app.use(express.static('public'))
+//App Usages
+app.use(express.static('public')); //makes images visible and external css functional
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 
 //Routes BEGIN here
