@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-//Handling of Customer Messages
+//Handling of Received Messages
 var customerMessages = []; //array to hold messages submitted via the form
 
 var CustomerMessage = function CustomerMessage(firstName, lastName, email, message) {
@@ -42,8 +42,9 @@ app.post("/confirmation", (req, res) => {
 app.get("/messages", (req, res) => {
     for (var i = 0; i < customerMessages.length; i++) {
         var currentMessage = customerMessages[i];
-        res.send(currentMessage.firstName + " " + currentMessage.LastName);
     }
+
+    res.send(currentMessage.firstName + " " + currentMessage.LastName);
 });
 
 app.get("/", (req, res) => {
