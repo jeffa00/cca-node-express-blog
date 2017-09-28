@@ -40,6 +40,14 @@ var writeSubmissions = function writeSubmissions () {
         }    });
 };
 
+//Reading of form submission messages
+var readSubmissionMessages = function readSubmissionMessages() {
+    fs.readFile(fileName, "utf8", (err, data) => {
+        submissionMessages = JSON.parse(data);
+    });
+
+}
+
 
 //Routes BEGIN here
 app.post("/confirmation", (req, res) => {
@@ -50,7 +58,7 @@ app.post("/confirmation", (req, res) => {
     customerMessages.push(newMessage); //pushes new messages to the array
 
     writeSubmissions(); //funtion (above) will write array of messages to the customerMessages.json file located in the messages direcory
-    
+
     res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
 });
 
@@ -131,3 +139,4 @@ app.get("/html", (req, res) => {
 
 app.listen(3000);
 console.log("The server is runnig on port 3000");
+readCustomerMessages();
