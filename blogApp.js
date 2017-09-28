@@ -6,7 +6,7 @@
 const express = require("express"),
     bodyParser = require("body-parser"),
     fs = require("fs"),
-    fileName = "messages/customerMessages.json" //file will hold form submissions 
+    fileName = "messages/customerMessages.json" //file will hold form submission messages
     app = express();
 
 
