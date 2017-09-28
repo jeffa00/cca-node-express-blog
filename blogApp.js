@@ -37,8 +37,7 @@ var writeSubmissions = function writeSubmissions () {
             throw err;
         }else {
             console.log("Wrote the Customer Messages File");
-        }
-    });
+        }    });
 };
 
 
@@ -50,11 +49,13 @@ app.post("/confirmation", (req, res) => {
     
     customerMessage.push(newMessage);
 
-    writeSumbmissions();
+    writeSumbmissions(); //funtion (above) will write array of messages to the customerMessages.json file located in the messages direcory
     
     res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
 });
 
+
+//this route will loop through the array of messages received and display them on the messages page
 app.get("/messages", (req, res) => {
     for (var i = 0; i < customerMessages.length; i++) {
         var currentMessage = customerMessages[i];
