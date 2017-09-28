@@ -17,8 +17,10 @@ app.use(express.static("public")); //makes images visible and external css funct
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+
 //Handling of Customer Messages
 var customerMessages = []; //array to hold messages submitted via the form
+
 var CustomerMessage = function CustomerMessage(firstName, lastName, email, message) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -26,14 +28,22 @@ var CustomerMessage = function CustomerMessage(firstName, lastName, email, messa
     this.message = message;
 }
 
+
 //Routes BEGIN here
 app.post("/confirmation", (req, res) => {
-    var body = req.body;
+    var body = req.body; //grabs content received via the form
 
     var newMessage = new CustomerMessage(body.firstName, body.lastName, body.email, body.message);
     customerMessages.push(newMessage);
 
     res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
+});
+
+app.get("messages", (req, res) => {
+    for (var i = 0; i < customerMessages.length; i++) {
+        var currentMessage = customerMessages[i];
+        res.send(currentMessage.firstName + " " + currentMessage.LastName);
+    }
 });
 
 app.get("/", (req, res) => {
