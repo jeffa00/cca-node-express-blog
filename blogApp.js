@@ -4,8 +4,9 @@
 
 //Importing express module and assigning to a const
 const express = require("express");
-const bodyParser = require("body-parser");
-const app = express();
+    bodyParser = require("body-parser"),
+    fs = require("fs"),
+    app = express();
 
 
 //setting the view engine to ejs
