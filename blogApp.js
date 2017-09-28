@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-//Handling of Received Messages
+//Handling of Received Messages via form submissions
 var customerMessages = []; //array to hold messages submitted via the form
 
 var CustomerMessage = function CustomerMessage(firstName, lastName, email, message) {
@@ -30,23 +30,28 @@ var CustomerMessage = function CustomerMessage(firstName, lastName, email, messa
     this.message = message;
 }
 
-//Writing of form submission to the customerMessages.json file
+//Writing of form submissions or messages to the customerMessages.json file
 var writeSubmissions = function writeSubmissions () {
-    fs.stat(fileName, (err, stat) => {
+    fs.writeFile(fileName, JSON.stringify(customerMessages), (err) => {
         if(err) {
-
+            throw err;
+        }else {
+            console.log("Wrote the Customer Messages File");
         }
     });
-}
+};
 
 
 //Routes BEGIN here
 app.post("/confirmation", (req, res) => {
-    var body = req.body; //grabs content received via the form
+    var body = req.body; //grabs all content received via the form
 
     var newMessage = new CustomerMessage(body.firstName, body.lastName, body.email, body.message);
-    customerMessages.push(newMessage);
+    
+    customerMessage.push(newMessage);
 
+    writeSumbmissions();
+    
     res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
 });
 
