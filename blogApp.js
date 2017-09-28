@@ -6,6 +6,7 @@
 const express = require("express"),
     bodyParser = require("body-parser"),
     fs = require("fs"),
+    fileName = "messages/customerMessages.json" //file will hold form submissions 
     app = express();
 
 
@@ -27,6 +28,15 @@ var CustomerMessage = function CustomerMessage(firstName, lastName, email, messa
     this.lastName = lastName;
     this.email = email;
     this.message = message;
+}
+
+//Writing of form submission to the customerMessages.json file
+var writeSubmissions = function writeSubmissions () {
+    fs.stat(fileName, (err, stat) => {
+        if(err) {
+
+        }
+    });
 }
 
 
