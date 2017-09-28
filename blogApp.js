@@ -39,7 +39,7 @@ app.post("/confirmation", (req, res) => {
     res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
 });
 
-app.get("messages", (req, res) => {
+app.get("/messages", (req, res) => {
     for (var i = 0; i < customerMessages.length; i++) {
         var currentMessage = customerMessages[i];
         res.send(currentMessage.firstName + " " + currentMessage.LastName);
