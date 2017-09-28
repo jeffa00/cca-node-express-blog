@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //Routes BEGIN here
 app.post("/confirmation", (req, res) => {
     var body = req.body;
-    res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong> !" + " Your message was submitted successfully!"});
+    res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
 });
 
 app.get("/", (req, res) => {
