@@ -49,7 +49,7 @@ app.post("/confirmation", (req, res) => {
     
     customerMessages.push(newMessage); //pushes new messages to the array
 
-    writeSumbmissions(); //funtion (above) will write array of messages to the customerMessages.json file located in the messages direcory
+    writeSubmissions(); //funtion (above) will write array of messages to the customerMessages.json file located in the messages direcory
     
     res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
 });
