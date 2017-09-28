@@ -45,7 +45,6 @@ var readSubmissionMessages = function readSubmissionMessages() {
     fs.readFile(fileName, "utf8", (err, data) => {
         submissionMessages = JSON.parse(data);
     });
-
 }
 
 
@@ -59,7 +58,7 @@ app.post("/confirmation", (req, res) => {
 
     writeSubmissions(); //funtion (above) will write array of messages to the customerMessages.json file located in the messages direcory
 
-    res.send("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
+    res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
 });
 
 
@@ -69,7 +68,7 @@ app.get("/messages", (req, res) => {
         var currentMessage = customerMessages[i];
     }
 
-    res.send(currentMessage.firstName + " " + currentMessage.LastName);
+    res.send(currentMessage.firstName.bodyParser + " " + currentMessage.LastName);
 });
 
 app.get("/", (req, res) => {
@@ -139,4 +138,4 @@ app.get("/html", (req, res) => {
 
 app.listen(3000);
 console.log("The server is runnig on port 3000");
-readCustomerMessages();
+readSubmissionMessages();
