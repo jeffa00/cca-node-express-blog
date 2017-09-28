@@ -47,7 +47,7 @@ app.post("/confirmation", (req, res) => {
 
     var newMessage = new CustomerMessage(body.firstName, body.lastName, body.email, body.message);
     
-    customerMessage.push(newMessage);
+    customerMessages.push(newMessage); //pushes new messages to the array
 
     writeSumbmissions(); //funtion (above) will write array of messages to the customerMessages.json file located in the messages direcory
     
