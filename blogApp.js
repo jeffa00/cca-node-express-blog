@@ -40,7 +40,7 @@ var writeSubmissions = function writeSubmissions () {
         }    });
 };
 
-//Reading of form submission messages
+//Reading of form submission messages from file
 var readSubmissionMessages = function readSubmissionMessages() {
     fs.readFile(fileName, "utf8", (err, data) => {
         submissionMessages = JSON.parse(data);
@@ -52,7 +52,7 @@ var readSubmissionMessages = function readSubmissionMessages() {
 app.post("/confirmation", (req, res) => {
     var body = req.body; //grabs all content received via the form
 
-    var newMessage = new CustomerMessage(body.firstName, body.lastName, body.email, body.message);
+    var newMessage = new CustomerMessage(body["first_name"], body["last_name"], body["email_address"], body["new-message"]);
     
     customerMessages.push(newMessage); //pushes new messages to the array
 
@@ -65,10 +65,12 @@ app.post("/confirmation", (req, res) => {
 //this route will loop through the array of messages received and display them on the messages page
 app.get("/messages", (req, res) => {
     for (var i = 0; i < customerMessages.length; i++) {
+        var message = "";
         var currentMessage = customerMessages[i];
+        message += currentMessage.firstName + " " + currentMessage.lastName;
     }
 
-    res.send(currentMessage.firstName.bodyParser + " " + currentMessage.LastName);
+    res.send(message);
 });
 
 app.get("/", (req, res) => {
