@@ -17,19 +17,22 @@ app.use(express.static("public")); //makes images visible and external css funct
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-// var formMessages = [];
-// var NewFormMessage = function NewFormMessage(firstName, lastName, email, message) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//     this.email = email;
-//     this.message = message;
-// }
-
-// NewFormMessage.push(formMessages);
+//Handling of Customer Messages
+var customerMessages = []; //array to hold messages submitted via the form
+var CustomerMessage = function CustomerMessage(firstName, lastName, email, message) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.message = message;
+}
 
 //Routes BEGIN here
 app.post("/confirmation", (req, res) => {
     var body = req.body;
+
+    var newMessage = new CustomerMessage(body.firstName, body.lastName, body.email, body.message);
+    customerMessages.push(newMessage);
+
     res.render("confirmation", {confirmation: "Hey, " + "<strong>" + body["first_name"] + "</strong>!" + " Your message was submitted successfully!"});
 });
 
