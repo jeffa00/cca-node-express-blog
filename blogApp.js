@@ -7,20 +7,30 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 
+
 //setting the view engine to ejs
 app.set("view engine", "ejs");
 
 
 //App Usages
-app.use(express.static('public')); //makes images visible and external css functional
+app.use(express.static("public")); //makes images visible and external css functional
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// var formMessages = [];
+// var NewFormMessage = function NewFormMessage(firstName, lastName, email, message) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.email = email;
+//     this.message = message;
+// }
 
+// NewFormMessage.push(formMessages);
 
 //Routes BEGIN here
 app.post("/confirmation", (req, res) => {
-    res.render("confirmation", {confirmation: "Thank you! Your Message Was Received by our team!"});
+    var body = req.body;
+    res.send("confirmation", {confirmation: "Thank you, " + body["first_name"] + "!" + "Your Message Was Received by our team!"});
 });
 
 app.get("/", (req, res) => {

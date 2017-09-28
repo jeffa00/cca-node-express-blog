@@ -172,7 +172,7 @@ ol {
 ********************************/
 aside {
     background-color: mediumaquamarine;
-    height: 30rem;
+    height: 40rem;
     margin-left: 8rem;
     padding-right: 10rem;
     border-radius: 2rem;
@@ -181,9 +181,10 @@ aside {
     
 /*Contact Form on Aside*/
 #contact-me {
-    width: 80%;
-    padding-top: 2rem;
-    padding-left: 7rem; 
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem; 
 }
 
     /* Send Now Button */
