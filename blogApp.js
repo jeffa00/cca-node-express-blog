@@ -73,6 +73,11 @@ app.get("/messages", (req, res) => {
     res.send(message);
 });
 
+app.get("/newpost", (req, res) => {
+    res.render("newpost");
+});
+
+
 app.get("/", (req, res) => {
     res.render("index", {
         heading: "<strong>Practical Steps For Success In a Coding Bootcamp</strong>",
