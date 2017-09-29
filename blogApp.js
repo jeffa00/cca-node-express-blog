@@ -10,6 +10,10 @@ const express = require("express"),
     fileName = path.join(__dirname,"messages/customerMessages.json"), //file will hold form submission messages
     app = express();
 
+//Blog repository related 
+var router = express.Router(),
+    repo = require("../models/postRepository");
+
 
 //setting the view engine to ejs
 app.set("view engine", "ejs");
@@ -76,7 +80,7 @@ app.get("/messages", (req, res) => {
     res.send(message);
 });
 
-app.get("/newpost", (req, res) => {
+app.get("/newpost", (req, res, next) => {
     res.render("newpost");
 });
 
