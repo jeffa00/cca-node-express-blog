@@ -67,9 +67,10 @@ app.post("/confirmation", (req, res) => {
 //this route will loop through the array of messages received and display them on the messages page
 app.get("/messages", (req, res) => {
     for (var i = 0; i < customerMessages.length; i++) {
-        var message = "";
+        var message = "<div><h2>";
         var currentMessage = customerMessages[i];
-        message += currentMessage.firstName + " " + currentMessage.lastName;
+        message += currentMessage.firstName + " " + currentMessage.lastName + "<br>" + currentMessage.email + "<br>" + currentMessage.message;
+        message += "</div></h2>"
     }
 
     res.send(message);
