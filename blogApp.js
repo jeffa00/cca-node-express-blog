@@ -11,8 +11,8 @@ const express = require("express"),
     app = express();
 
 //Blog repository related 
-var router = express.Router(),
-    repo = require("../models/postRepository");
+var router = express.Router();
+// var repo = require("/models/postRepository");
 
 
 //setting the view engine to ejs
@@ -80,13 +80,20 @@ app.get("/messages", (req, res) => {
     res.send(message);
 });
 
-app.get("/newpost", (req, res, next) => {
+app.get("/newpost", (req, res) => {
     res.render("newpost");
 });
 
-app.post("/newpost", (req, res) => {
-    res.render("newpost");
-});
+//rendering of the blog posts from the repo
+app.get("/blog", function(req, res, next){
+    var posts = repo.getPosts();
+  
+    res.render("blog", { title: "My Blog Posts", posts: posts });
+  });
+
+// app.post("/newpost", (req, res) => {
+//     res.render("newpost");
+// });
 
 
 app.get("/", (req, res) => {
