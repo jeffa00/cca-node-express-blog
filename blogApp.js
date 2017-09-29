@@ -6,16 +6,18 @@
 const express = require("express"),
     bodyParser = require("body-parser"),
     fs = require("fs"),
-    fileName = "messages/customerMessages.json" //file will hold form submission messages
+    path = require("path"),
+    fileName = path.join(__dirname,"messages/customerMessages.json"), //file will hold form submission messages
     app = express();
 
 
 //setting the view engine to ejs
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 
 //App Usages
-app.use(express.static("public")); //makes images visible and external css functional
+app.use(express.static(path.join(__dirname, "public"))); //makes images visible and external css functional
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -43,7 +45,7 @@ var writeSubmissions = function writeSubmissions () {
 //Reading of form submission messages from file
 var readSubmissionMessages = function readSubmissionMessages() {
     fs.readFile(fileName, "utf8", (err, data) => {
-        submissionMessages = JSON.parse(data);
+        customerMessages = JSON.parse(data);
     });
 }
 
@@ -74,6 +76,10 @@ app.get("/messages", (req, res) => {
 });
 
 app.get("/newpost", (req, res) => {
+    res.render("newpost");
+});
+
+app.post("/newpost", (req, res) => {
     res.render("newpost");
 });
 
