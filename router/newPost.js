@@ -1,5 +1,6 @@
 var express = require('express'),
 router = express.Router(),
+path = require("path");
 repo = require('../models/postRepository');
 
 /* GET newpost page. */

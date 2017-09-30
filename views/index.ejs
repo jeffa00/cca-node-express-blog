@@ -1,10 +1,9 @@
 <% include head %>
 
-<h2><%- heading %></h2>
-<p><%= narrative %></p> 
-<% include adviselist %>    
+<% for(var i = 0; i < posts.length; i++) {%>
+    <h1><%= posts[i].title %></h1>
+<% } %> 
 
-<p id="more-arrow"><a href="/bootcamp">Continue Reading &rarr;</a></p>
 
 <% include body %>
     

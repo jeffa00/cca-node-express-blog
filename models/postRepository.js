@@ -86,4 +86,5 @@ writeFile: writeFile,
 loadPosts: loadPosts
 };
 
+loadPosts();
 module.exports = repo;
