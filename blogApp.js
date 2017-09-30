@@ -13,7 +13,7 @@ const express = require("express"),
 //Blog repository related 
 var router = express.Router();
 var repo = require("./models/postRepository");
-var newPost = require("./models/newPost.js");
+var newPost = require("./router/newPost.js");
 
 
 //setting the view engine to ejs

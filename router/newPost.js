@@ -3,7 +3,7 @@ router = express.Router(),
 repo = require('../models/postRepository');
 
 /* GET newpost page. */
-app.get('/', function(req, res, next){
+router.get('/', function(req, res, next){
     res.render('newpost', { title: "New Post"});
 });
 
