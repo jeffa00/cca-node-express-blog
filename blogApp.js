@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, "public"))); //makes images visible and external css functional
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-// app.use("/newpost", newPost);
+app.use("/newpost", newPost);
 
 
 //Handling of Received Messages via form submissions
@@ -82,9 +82,9 @@ app.get("/messages", (req, res) => {
     res.send(message);
 });
 
-app.get("/newpost", (req, res) => {
-    res.render("newpost");
-});
+// app.get("/newpost", (req, res) => {
+//     res.render("newpost");
+// });
 
 //rendering of the blog posts from the repo
 app.post("/newpost", function(req, res, next){
