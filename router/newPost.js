@@ -11,7 +11,7 @@ router.get('/', function(req, res, next){
 
 router.post("/", function(req, res, next){
     var newPost = {};
-    newPost.id = req.body.id;
+    // newPost.id = req.body.id;
     newPost.title = req.body.title;
     // newPost.author = {};   
     newPost.author = req.body.firstName + " " + req.body.lastName;
