@@ -84,7 +84,7 @@ app.get("/messages", (req, res) => {
 
 app.get("/", (req, res) => {
     var posts = repo.getPosts();
-    res.render("index", { posts: posts, 
+    res.render("index", { posts: posts
     });
 });
 

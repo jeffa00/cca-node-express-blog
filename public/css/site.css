@@ -79,7 +79,7 @@ body {
 }
 
 .featured-article {
-    max-width: 50%;
+    /* max-width: 50%; */
     margin-left: 5rem;
     padding: 3rem;
     background-color: white; 
@@ -110,6 +110,13 @@ p {
 ol {
     font-size: 1.6rem;
 }
+
+article {
+    border: 2px solid firebrick;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+} 
 
 /*PAGINATION*/
 #pagination-list-items {
