@@ -60,7 +60,7 @@ var readSubmissionMessages = function readSubmissionMessages() {
 app.post("/confirmation", (req, res) => {
     var body = req.body; //grabs all content received via the form
 
-    var newMessage = new CustomerMessage(body["first_name"], body["last_name"], body["email_address"], body["new-message"]);
+    var newMessage = new CustomerMessage(body["first_name"], body["last_name"], body["email_address"], body["user-message"]);
     
     customerMessages.push(newMessage); //pushes new messages to the array
 
