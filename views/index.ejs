@@ -5,7 +5,8 @@
         <p><strong>Author: </strong><%= posts[i].author %><br>
         <strong>Date: </strong><%= posts[i].pubDate %></p>
         <br>
-        <p><%= posts[i].content %></p>
+        <!-- The difference is the = vs -. The dash lets it convert the tags to elements -->
+        <p><%- posts[i].content %></p>
         </article>
         <hr>
 <% } %> 
