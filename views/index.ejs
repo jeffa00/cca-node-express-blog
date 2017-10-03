@@ -2,11 +2,12 @@
 
 <% for(var i = 0; i < posts.length; i++) {%>
         <article><h2><%= posts[i].title %></h2>
-        <p><strong>Author: </strong><%= posts[i].author %></p>
-        <p><strong>Date: </strong><%= posts[i].pubDate %></p>
+        <p><strong>Author: </strong><%= posts[i].author %><br>
+        <strong>Date: </strong><%= posts[i].pubDate %></p>
+        <br>
         <p><%= posts[i].content %></p>
         </article>
-
+        <hr>
 <% } %> 
 
 
