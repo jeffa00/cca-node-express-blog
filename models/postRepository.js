@@ -1,6 +1,7 @@
 var fs = require('fs'),
 path = require('path');
 
+console.log("Starting Repository");
 var filePath = path.join(__dirname, 'data');
 var fileName = path.join(filePath, 'postData.json');
 
@@ -87,5 +88,7 @@ writeFile: writeFile,
 loadPosts: loadPosts
 };
 
+console.log("Preparing to load Posts");
 loadPosts();
+console.log("Finished loading Posts");
 module.exports = repo;

@@ -8,7 +8,8 @@ const express = require("express"),
     fs = require("fs"),
     path = require("path"),
     fileName = path.join(__dirname,"messages/customerMessages.json"), //file will hold form submission messages
-    app = express();
+    app = express(),
+    port = process.env.port || 3000;
 
 //Blog repository related 
 var router = express.Router();
@@ -156,6 +157,6 @@ app.get("/html", (req, res) => {
     });
 //Routes END here
 
-app.listen(3000);
+app.listen(port);
 console.log("The server is runnig on port 3000");
 readSubmissionMessages();
