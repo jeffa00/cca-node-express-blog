@@ -88,6 +88,12 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/post/:id", (req, res)=>{
+    var post = repo.getPostById(req.params.id);
+    // res.render("post", post);
+    res.send(post);
+});
+
 app.get("/about", (req, res) => {
     res.render("about", {
         about: "About Me",
