@@ -40,6 +40,7 @@ var CustomerMessage = function CustomerMessage(firstName, lastName, email, messa
 
 //Writing of form submissions or messages to the customerMessages.json file
 var writeSubmissions = function writeSubmissions () {
+    console.log("writeSubmission");
     fs.writeFile(fileName, JSON.stringify(customerMessages), (err) => {
         if(err) {
             throw err;
@@ -50,6 +51,7 @@ var writeSubmissions = function writeSubmissions () {
 
 //Reading of form submission messages from file
 var readSubmissionMessages = function readSubmissionMessages() {
+    console.log("readSubmissionMessages " + fileName);
     fs.readFile(fileName, "utf8", (err, data) => {
         customerMessages = JSON.parse(data);
     });
@@ -83,6 +85,7 @@ app.get("/messages", (req, res) => {
 });
 
 app.get("/", (req, res) => {
+    console.log("GET / ");
     var posts = repo.getPosts();
     res.render("index", { posts: posts
     });
