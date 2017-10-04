@@ -7,6 +7,7 @@ var fileName = path.join(filePath, 'postData.json');
 var postList = [];
 
 var loadPosts = function loadPosts() {
+    console.log("Loading Posts from " + fileName);
 if(postList.length < 1) {
     fs.stat(fileName, (err, stat) =>{
         if(err) {

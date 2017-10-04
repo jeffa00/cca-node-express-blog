@@ -54,6 +54,7 @@ var readSubmissionMessages = function readSubmissionMessages() {
     console.log("readSubmissionMessages " + fileName);
     fs.readFile(fileName, "utf8", (err, data) => {
         customerMessages = JSON.parse(data);
+        console.log("read submissions" + data);
     });
 }
 
